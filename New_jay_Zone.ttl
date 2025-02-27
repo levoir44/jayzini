@@ -1,0 +1,86 @@
+#This is a spatial biography of Jayz
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix xml: <http://www.w3.org/XML/1998/namespace>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix dbp: <http://dbpedia.org/resource/>.
+@prefix dbp-ont: <http://dbpedia.org/ontology/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix wgs84: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+# Jay-Z Resource
+dbp:Jay-Z dbp-ont:birthPlace dbp:New_York_City;
+foaf:name "Jay-Z";
+dbp-ont:birthDate "1969-12-04^^xsd:date";
+dbp-ont:birthPlace dbp:New_York_City ;
+dbp-ont:thumbnail <https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Jay-Z_%40_Shawn_%27Jay-Z%27_Carter_Foundation_Carnival_%28crop_2%29.jpg/300px-Jay-Z_%40_Shawn_%27Jay-Z%27_Carter_Foundation_Carnival_%28crop_2%29.jpg>;
+dbp-ont:musicalArtist dbp:The_Blueprint.
+
+# The Blueprint Album Resource
+dbp:The_Blueprint
+rdf:type dbp-ont:Album;
+foaf:name "The Blueprint";
+dbp-ont:artist dbp:Jay-z;
+dbp-ont:releaseDate "2001-09-11^^xsd:date";
+dbp-ont:genre "Hip hop";
+dbp-ont:recordLabel "Roc-A-Fella Records";
+dbp-ont:thumbnail <https://commons.wikimedia.org/wiki/Special:FilePath/The_Blueprint.png>;
+dbp-ont:producer dbp:Just_Blaze;
+dbp-ont:producer dbp:Kanye_West;
+dbp-ont:producer dbp:Timbaland;
+dbp-ont:producer dbp:Eminem.
+   
+
+# Producers
+dbp:Just_Blaze a foaf:Person ;
+    foaf:name "Just Blaze" ;
+    dbp-ont:birthPlace dbp:New_Jersey ;
+    dbp:producerOf dbp:The_Blueprint.
+   
+dbp:Kanye_West a foaf:Person ;
+    foaf:name "Kanye West" ;
+    dbp-ont:birthPlace dbp:Atlanta ;
+    dbp-ont:producerOf dbp:The_Blueprint.
+   
+dbp:Timbaland a foaf:Person ;
+    foaf:name "Timbaland" ;
+    dbp-ont:birthPlace <https://dbpedia.org/page/Norfolk,_Virginia>;
+	dbp-ont:producerOf dbp:The_Blueprint.
+   
+dbp:Eminem a foaf:Person ;
+    foaf:name "Eminem" ;
+    dbp-ont:birthPlace <https://dbpedia.org/page/St._Joseph,_Missouri>;
+    dbp-ont:producerOf dbp:The_Blueprint.
+
+# St. Joseph, Missouri
+dbp:St_Joseph_Missouri 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-94.8300 39.7675)"^^<http://www.opengis.net/ont/sf#wktLiteral>;
+    rdfs:label "St. Joseph, Missouri".
+
+# New Jersey
+dbp:New_Jersey 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-74.4057 40.0583)"^^<http://www.opengis.net/ont/sf#wktLiteral>;
+    rdfs:label "New Jersey".
+
+# New York
+dbp:New_York_City
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-74.0060 40.7128)"^^<http://www.opengis.net/ont/sf#wktLiteral>;
+    rdfs:label "New York City".
+
+# Norfolk
+<https://dbpedia.org/page/Norfolk,_Virginia> 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-76.2859 36.8508)"^^<http://www.opengis.net/ont/sf#wktLiteral>;
+    rdfs:label "Norfolk, Virginia".
+
+# Atlanta
+dbp:Atlanta 
+    wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-84.3880 33.7490)"^^<http://www.opengis.net/ont/sf#wktLiteral>;
+    rdfs:label "Atlanta, Georgia".
+    
+# misouri
+<https://dbpedia.org/page/St._Joseph,_Missouri>
+wgs84:geometry "<http://www.opengis.net/def/crs/OGC/1.3/CRS84> POINT(-94.8467 39.7675)"^^<http://www.opengis.net/ont/sf#wktLiteral>;
+    rdfs:label "St. Joseph, Missouri".
